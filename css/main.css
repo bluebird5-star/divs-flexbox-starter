@@ -99,12 +99,13 @@ textarea {
 html {
   background-color: #fff;
   height: 100%;
+  width: 100%;
 }
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
   padding: 2em;
-  font-size: 1.25em;
+font-weight: 700;
   height: 100%;
 }
 
@@ -112,24 +113,34 @@ body {
   /*add display:flex and set justify-content to space-between*/
 display: flex;
 justify-content: space-between;
-  font-weight: 700;
+flex-flow: wrap;
+align-items: center;
+
 }
 
 .div-1, .div-2, .div-3 {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
-display: flex;
-justify-content: center;
-align-items: center;
-width: 30%;
-  color: #fff;
+  display: flex;
+  justify-content:center;
+  align-items: center;
   line-height: 1.5em;
-  font-size: 1.6em;
-  background-color: #f16059;
-  height: 300px;
+  font-size: 1.25em;
+
+  background-color: #eee1d9;
+height: auto;
+  padding: 0.8%;
 }
 
 
-
+.div-1{
+  color:#1774ae;
+}
+.div-2{
+  color:#90678c;
+}
+.div-3{
+  color:#da8037;
+}
 
 /* ==========================================================================
    Helper classes
@@ -210,6 +221,10 @@ width: 30%;
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+  @media all and (min-width: 1200px) {
+      .div-1, .div-2, .div-3 {
+        flex-basis: 30%;
+      }
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
