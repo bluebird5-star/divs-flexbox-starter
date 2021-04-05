@@ -97,7 +97,7 @@ textarea {
 
 
 html {
-  background-color: #fff;
+  background-color: #eee1d9;
   height: 100%;
   width: 100%;
 }
@@ -108,15 +108,49 @@ body {
 font-weight: 700;
   height: 100%;
 }
+header{
+  font-size: 3em;
+  color: black;
+
+}
+header,
+footer {
+  height: 80px;
+  width: 100%;
+}
+
+main {
+  height: auto;
+  width: 100%;
+  font-size: 2em;
+  padding: 0.8%;
+  border-bottom: 1px solid black;
+}
+
+header,
+footer,
+main {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+footer{
+  border-top: 1px solid black;
+}
+footer i {
+  padding: 30px 20px 0 0;
+}
 
 .wrapper {
   /*add display:flex and set justify-content to space-between*/
 display: flex;
 justify-content: space-between;
-flex-flow: wrap;
+justify-content: center;
+flex-flow: row wrap;
 align-items: center;
-
 }
+
 
 .div-1, .div-2, .div-3 {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
@@ -125,20 +159,17 @@ align-items: center;
   align-items: center;
   line-height: 1.5em;
   font-size: 1.25em;
-
-  background-color: #eee1d9;
-height: auto;
-  padding: 0.8%;
+  padding: 1%;
 }
 
 
-.div-1{
+.div-1 p{
   color:#1774ae;
 }
-.div-2{
+.div-2 p{
   color:#90678c;
 }
-.div-3{
+.div-3 p{
   color:#da8037;
 }
 
@@ -221,10 +252,20 @@ height: auto;
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-  @media all and (min-width: 1200px) {
+
+
+  @media (min-width: 1200px) {
       .div-1, .div-2, .div-3 {
         flex-basis: 30%;
+        height: 150px;
+
       }
+      .div-2 p{
+        border-right: 1px solid Black;
+border-left: 1px solid Black;
+        padding: 0 30px;
+}
+
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
